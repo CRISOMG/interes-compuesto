@@ -1,22 +1,19 @@
 def run():
     inversion = 1000
-    tiempo = range(1, 121)
+    tiempo = 10
+    interes_compuesto = 0.1
 
-    crecimiento = inversion
-    for mes in tiempo:
-        print(
-            f"\x1b[33m mes {mes} \x1b[0m / \x1b[32m ganancias: ${crecimiento} \x1b[0m")
-        crecimiento = crecimiento + int(crecimiento * 0.1)
+    retorno = inversion*(1+interes_compuesto)**tiempo
 
     print(
         f"""
-\x1b[93m Inversión inicial: $1000 \x1b[0m
+\x1b[93m Inversión inicial: ${inversion} \x1b[0m
 
 \x1b[96m Interes compuesto: %10 \x1b[0m
 
-\x1b[93m Tiempo: {int(len(tiempo) / 12)} años \x1b[0m
+\x1b[93m Tiempo Total: {tiempo} años \x1b[0m
 
-\x1b[32m Retorno: ${crecimiento} \x1b[0m
+\x1b[32m Retorno: ${round(retorno,2)} \x1b[0m
         """
     )
 
