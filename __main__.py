@@ -1,4 +1,4 @@
-def run():
+def ic():
     inversion = 1000
     tiempo = 10
     interes_compuesto = 0.1
@@ -7,15 +7,19 @@ def run():
 
     print(
         f"""
-\x1b[93m Inversión inicial: ${inversion} \x1b[0m
+    \x1b[93m Inversión inicial: ${inversion} \x1b[0m
 
-\x1b[96m Interes compuesto: %10 \x1b[0m
+    \x1b[96m Interes compuesto: %10 \x1b[0m
 
-\x1b[93m Tiempo Total: {tiempo} años \x1b[0m
+    \x1b[93m Tiempo Total: {tiempo} años \x1b[0m
 
-\x1b[32m Retorno: ${round(retorno,2)} \x1b[0m
+    \x1b[32m Retorno: ${round(retorno,2)} \x1b[0m
         """
     )
+
+
+def run():
+    ic()
 
 
 if __name__ == "__main__":
