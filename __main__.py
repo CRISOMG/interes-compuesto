@@ -1,25 +1,28 @@
-def ic():
-    inversion = 1000
-    tiempo = 10
-    interes_compuesto = 0.1
+def calc(inversion, interes, tiempo):
+    # Formula para calcular interes compuesto
+    # M = C * (1 + i)**​n
 
-    retorno = inversion*(1+interes_compuesto)**tiempo
+    # M es la suma de capital más intereses al final del período.
+    # C es el capital inicial.
+    # i es la tasa de interés compuesto.
+    # n es el número de períodos durante los cuales se capitaliza el interés compuesto.
 
-    print(
-        f"""
-    \x1b[93m Inversión inicial: ${inversion} \x1b[0m
+    C = inversion
+    I = interes
+    N = tiempo
 
-    \x1b[96m Interes compuesto: %10 \x1b[0m
+    M = C * (1+I)**N
 
-    \x1b[93m Tiempo Total: {tiempo} años \x1b[0m
-
-    \x1b[32m Retorno: ${round(retorno,2)} \x1b[0m
-        """
-    )
+    return int(M)
 
 
 def run():
-    ic()
+    inversion = int(input("Capital inicial: $"))
+    interes = float("0." + input("Porcentaje de interes: 0."))
+    tiempo = int(input("Numero de Periodos: "))
+
+    retorno = calc(inversion, interes, tiempo)
+    print(f"\x1b[32m retorno: ${retorno} \x1b[0m")
 
 
 if __name__ == "__main__":
