@@ -1,3 +1,16 @@
+print("""
+Bienvenid@ a nuestra calculadora de Interes Compuesto.
+
+ Este codigo te permite calcular el interes compuesto producido por una capital inicial en un periodo de tiempo especifico;
+este puede bien ser meses, dias o inclusive años.
+
+ Recuerda que el interes compuesto hace que el valor que se paga por concepto de intereses se incremente mes a mes,
+puesto que la base para el cálculo del interés se incrementa cada vez que se liquidan los respectivos intereses. 
+ 
+ 
+ """)
+
+
 def calc(inversion, interes, tiempo):
     # Formula para calcular interes compuesto
     # M = C * (1 + i)**​n
